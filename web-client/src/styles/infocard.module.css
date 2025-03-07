@@ -1,0 +1,38 @@
+.element {
+    height: 60px
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Stack number on top of text */
+    align-items: flex-start; /* Start-align items */
+    margin-right: 120px; /* Space between cards */
+}
+
+.value {
+    font-size: 2rem; /* Larger font for the number */
+    color: #FFFFFF; /* Color for the number */
+    margin-bottom: 4px; /* Small space between number and text */
+}
+
+.title {
+    font-size: 1rem; /* Smaller font for the title */
+    color: #CCCCCC; /* Grayish color for text */
+    text-transform: uppercase; /* Styling for the title */
+    text-align: center;
+}
+
+@media (max-width: 1621px) {
+    .card {
+        margin-bottom: 20px; /* Space between stacked cards */
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-right: 0; /* Cards stack without space on the right on small screens */
+        margin-bottom: 20px; /* Space between stacked cards */
+        margin-right: 50px;
+    }
+}

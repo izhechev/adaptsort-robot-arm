@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: adaptsort
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - server-network
+
+  backend:
+    build: ./server
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - server-network
+
+  frontend:
+    build: ./web-client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - server-network
+
+volumes:
+  postgres_data:
+
+networks:
+  server-network:
+    driver: bridge

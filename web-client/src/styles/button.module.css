@@ -1,0 +1,66 @@
+.refreshButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.refreshButton {
+    position: absolute;
+    margin-right: 415px;
+    background-color: #34C759;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 110px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.refreshButton:hover,
+.refreshButton:focus {
+    background-color: #30A14E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.refreshButtonIcon {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1405px) {
+    margin-right: 5px;
+}
+
+@media (max-width: 1350px) {
+    .refreshButton {
+        position: absolute;
+    }
+}
+
+@media (max-width: 1280px) {
+    .refreshButton {
+        padding: 15px 80px;
+        margin-right: 382px;
+    }
+}
+
+@media (max-width: 768px) {
+    .refreshButton {
+        padding: 15px 30px;
+        width: auto;
+        font-size: 1rem;
+    }
+
+    .refreshButtonIcon {
+        font-size: 1.5rem;
+    }
+}
