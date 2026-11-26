@@ -1,4 +1,8 @@
-# BIP---AdaptSort-project
+# AdaptSort
+
+AdaptSort is an Erasmus+ team project that uses computer vision and a robot arm to sort objects. The controller classifies objects with Python and MMDetection, and the server records them for a web dashboard.
+
+The repository contains the [Python controller](pythonic-robot-controller/), [robot code](robot-part/), [server](server/) and [web client](web-client/). The instructions below run the server and database locally. Physical sorting requires the robot setup.
 
 ## How to start the server & database
 
